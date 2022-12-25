@@ -1,6 +1,7 @@
 package Classes;
 
-public class Tests {
+public class Tests {  //с появлением оконного интерфейса тесты нужны теперь такие
+    // (те просто проверяется программа, чтение и заполнение файла)
        String str = "ЧТОооо? да. пошли. радно. оКкк?";
            public String testPath1In=".\\input01.txt",testPath1Out=".\\output01.txt";
            public String testPath2In=".\\input02.txt",testPath2Out=".\\output02.txt";

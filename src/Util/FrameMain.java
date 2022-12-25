@@ -98,7 +98,7 @@ public class FrameMain extends JFrame {
                 try {
                     if (finalFileChooserOpen.showOpenDialog(panelMain) == JFileChooser.APPROVE_OPTION) {
                         String str = ClassesForInAndOut.readFile(finalFileChooserOpen.getSelectedFile().getPath());
-                        textArea2.setText(str);
+                        textArea2.setText(str);  //вывели текст на поле
                     }
                 } catch (Exception e) {
                     SwingUtils.showErrorMessageBox(e);
@@ -112,11 +112,11 @@ public class FrameMain extends JFrame {
             public void actionPerformed(ActionEvent e) {
                 try {
                     if (finalFileChooserSave.showSaveDialog(panelMain) == JFileChooser.APPROVE_OPTION) {
-                        String str = textArea2.getText();
+                        String str = textArea2.getText(); //получили текст с поля
                         String result = MainLogic.getAnswer(str);
-                        textArea3.setText(result);
+                        textArea3.setText(result); //выводим в текстовое поле textArea3 наш ответ
                         textField1.setText("Ответ:");
-                        String path = finalFileChooserSave.getSelectedFile().getPath();
+                        String path = finalFileChooserSave.getSelectedFile().getPath(); //тут и далее записываем в файл ответ наш
                         File file = new File(path);
                         PrintWriter pw = new PrintWriter(file);
                         pw.println(textArea3.getText());
