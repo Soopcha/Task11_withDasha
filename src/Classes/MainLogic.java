@@ -111,7 +111,7 @@ TreeSet<String>) для хранения уже выбранных элемен�
                     stringBuilder.delete(stringBuilder.length() - 4, stringBuilder.length());
                     stringBuilder.insert(stringBuilder.length(), "?");
                     list2.add(String.valueOf(stringBuilder));
-                }
+                }//регулярные выражения
             }
         }
 
